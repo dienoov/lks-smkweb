@@ -224,7 +224,7 @@
                 <div class="row">
                     <div
                         class="col-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center">
-                        <h2 class="font-biryani-black text-uppercase">Pricing</h2>
+                        <h2 class="font-biryani-black text-uppercase">Products</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -237,161 +237,41 @@
                     </div>
                 </div>
                 <div class="row my-3">
-                    <div class="col-lg-4 py-3">
-                        <div class="card border-0 shadow-sm h-100 px-5 py-3">
-                            <div class="card-title font-biryani-bold">Free Plan</div>
-                            <h1 class="card-text">$0</h1>
-                            <p class="text-turqoise">per month</p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Quam adipiscing vitae proin
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nec feugiat nisl pretium
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nulla at volutpat diam uteera
-                            </p>
-                            <p class="text-muted text-decoration-line-through">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-muted">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M6 18L18 6M6 6l12 12"/>
-                                </svg>
-                                Pharetra massa massa ultricies
-                            </p>
-                            <p class="text-muted text-decoration-line-through">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-muted">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M6 18L18 6M6 6l12 12"/>
-                                </svg>
-                                Massa ultricies mi quis hendrerit
-                            </p>
+                    <div id="products" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card text-center w-50 mx-auto">
+                                    <img src="/img/default-product.jpg" class="card-img-top w-50 mx-auto" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title font-biryani-bold">Free Plan</div>
+                                        <p class="text-turqoise">Free</p>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card text-center w-50 mx-auto">
+                                    <img src="/img/default-product.jpg" class="card-img-top w-50 mx-auto" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title font-biryani-bold">Business Plan</div>
+                                        <p class="text-turqoise">Rp250.000,-</p>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 py-3">
-                        <div class="card border-spray shadow-sm h-100 px-5 py-3">
-                            <div class="card-title font-biryani-bold">Business Plan</div>
-                            <h1 class="card-text">$29</h1>
-                            <p class="text-turqoise">per month</p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Quam adipiscing vitae proin
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nec feugiat nisl pretium
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nulla at volutpat diam uteera
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Pharetra massa massa ultricies
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Massa ultricies mi quis hendrerit
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 py-3">
-                        <div class="card border-0 shadow-sm h-100 px-5 py-3">
-                            <div class="card-title font-biryani-bold">Developer Plan</div>
-                            <h1 class="card-text">$49</h1>
-                            <p class="text-turqoise">per month</p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Quam adipiscing vitae proin
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nec feugiat nisl pretium
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Nulla at volutpat diam uteera
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Pharetra massa massa ultricies
-                            </p>
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     height="24" class="text-success">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Massa ultricies mi quis hendrerit
-                            </p>
-                        </div>
+                        <a class="carousel-control-prev" href="#products" role="button"
+                           data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#products" role="button"
+                           data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -540,7 +420,7 @@
                             <li><a href="#about-us" class="text-decoration-none lh-lg">About us</a></li>
                             <li><a href="#services" class="text-decoration-none lh-lg">Services</a></li>
                             <li><a href="#team" class="text-decoration-none lh-lg">Team</a></li>
-                            <li><a href="#pricing" class="text-decoration-none lh-lg">Pricing</a></li>
+                            <li><a href="#pricing" class="text-decoration-none lh-lg">Products</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-6 py-3 px-lg-5">

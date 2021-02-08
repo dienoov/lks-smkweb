@@ -32,7 +32,7 @@
                             <a class="nav-link font-biryani-bold" href="#team">Team</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link font-biryani-bold" href="#pricing">Pricing</a>
+                            <a class="nav-link font-biryani-bold" href="#pricing">Products</a>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link font-biryani-bold" href="#contact">Contact</a>

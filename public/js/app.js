@@ -2311,126 +2311,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -21168,532 +21048,7 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "section",
-        { staticClass: "d-flex align-items-center", attrs: { id: "pricing" } },
-        [
-          _c(
-            "div",
-            { staticClass: "container py-5", attrs: { "data-aos": "fade-up" } },
-            [
-              _vm._m(7),
-              _vm._v(" "),
-              _vm._m(8),
-              _vm._v(" "),
-              _c("div", { staticClass: "row my-3" }, [
-                _c("div", { staticClass: "col-lg-4 py-3" }, [
-                  _c(
-                    "div",
-                    { staticClass: "card border-0 shadow-sm h-100 px-5 py-3" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "card-title font-biryani-bold" },
-                        [_vm._v("Free Plan")]
-                      ),
-                      _vm._v(" "),
-                      _c("h1", { staticClass: "card-text" }, [_vm._v("$0")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-turqoise" }, [
-                        _vm._v("per month")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Quam adipiscing vitae proin\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nec feugiat nisl pretium\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nulla at volutpat diam uteera\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          staticClass: "text-muted text-decoration-line-through"
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "text-muted",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                height: "24"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(
-                            "\n                            Pharetra massa massa ultricies\n                        "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          staticClass: "text-muted text-decoration-line-through"
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "text-muted",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                height: "24"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(
-                            "\n                            Massa ultricies mi quis hendrerit\n                        "
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4 py-3" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card border-spray shadow-sm h-100 px-5 py-3"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "card-title font-biryani-bold" },
-                        [_vm._v("Business Plan")]
-                      ),
-                      _vm._v(" "),
-                      _c("h1", { staticClass: "card-text" }, [_vm._v("$29")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-turqoise" }, [
-                        _vm._v("per month")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Quam adipiscing vitae proin\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nec feugiat nisl pretium\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nulla at volutpat diam uteera\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Pharetra massa massa ultricies\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Massa ultricies mi quis hendrerit\n                        "
-                        )
-                      ])
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4 py-3" }, [
-                  _c(
-                    "div",
-                    { staticClass: "card border-0 shadow-sm h-100 px-5 py-3" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "card-title font-biryani-bold" },
-                        [_vm._v("Developer Plan")]
-                      ),
-                      _vm._v(" "),
-                      _c("h1", { staticClass: "card-text" }, [_vm._v("$49")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-turqoise" }, [
-                        _vm._v("per month")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Quam adipiscing vitae proin\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nec feugiat nisl pretium\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Nulla at volutpat diam uteera\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Pharetra massa massa ultricies\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "text-success",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                              height: "24"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M5 13l4 4L19 7"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(
-                          "\n                            Massa ultricies mi quis hendrerit\n                        "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]
-          )
-        ]
-      ),
+      _vm._m(7),
       _vm._v(" "),
       _c(
         "section",
@@ -21703,9 +21058,9 @@ var render = function() {
         },
         [
           _c("div", { staticClass: "container" }, [
-            _vm._m(9),
+            _vm._m(8),
             _vm._v(" "),
-            _vm._m(10),
+            _vm._m(9),
             _vm._v(" "),
             _c("div", { staticClass: "row mb-5" }, [
               _c("div", { staticClass: "col-lg-5 py-3" }, [
@@ -21749,7 +21104,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(11)
+                      _vm._m(10)
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "row my-3" }, [
@@ -21781,7 +21136,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(12)
+                      _vm._m(11)
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "row my-3" }, [
@@ -21813,25 +21168,25 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(13)
+                      _vm._m(12)
                     ]),
                     _vm._v(" "),
-                    _vm._m(14)
+                    _vm._m(13)
                   ])
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(15)
+              _vm._m(14)
             ])
           ])
         ]
       ),
       _vm._v(" "),
+      _vm._m(15),
+      _vm._v(" "),
       _vm._m(16),
       _vm._v(" "),
-      _vm._m(17),
-      _vm._v(" "),
-      _vm._m(18)
+      _vm._m(17)
     ],
     1
   )
@@ -22142,34 +21497,169 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "col-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center"
-        },
-        [
-          _c("h2", { staticClass: "font-biryani-black text-uppercase" }, [
-            _vm._v("Pricing")
-          ])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-12 text-center" }, [
-        _c("p", [
-          _vm._v(
-            "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.\n                        Sit sint\n                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.\n                        Quia\n                        fugiat sit in iste officiis commodi quidem hic quas."
-          )
-        ])
-      ])
-    ])
+    return _c(
+      "section",
+      { staticClass: "d-flex align-items-center", attrs: { id: "pricing" } },
+      [
+        _c(
+          "div",
+          { staticClass: "container py-5", attrs: { "data-aos": "fade-up" } },
+          [
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center"
+                },
+                [
+                  _c(
+                    "h2",
+                    { staticClass: "font-biryani-black text-uppercase" },
+                    [_vm._v("Products")]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-12 text-center" }, [
+                _c("p", [
+                  _vm._v(
+                    "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.\n                        Sit sint\n                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.\n                        Quia\n                        fugiat sit in iste officiis commodi quidem hic quas."
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row my-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "carousel carousel-dark slide",
+                  attrs: { id: "products", "data-bs-ride": "carousel" }
+                },
+                [
+                  _c("div", { staticClass: "carousel-inner" }, [
+                    _c("div", { staticClass: "carousel-item active" }, [
+                      _c(
+                        "div",
+                        { staticClass: "card text-center w-50 mx-auto" },
+                        [
+                          _c("img", {
+                            staticClass: "card-img-top w-50 mx-auto",
+                            attrs: {
+                              src: "/img/default-product.jpg",
+                              alt: "..."
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-body" }, [
+                            _c(
+                              "div",
+                              { staticClass: "card-title font-biryani-bold" },
+                              [_vm._v("Free Plan")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "text-turqoise" }, [
+                              _vm._v("Free")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "card-text" }, [
+                              _vm._v(
+                                "Some quick example text to build on the card title and make\n                                        up the bulk of the card's content."
+                              )
+                            ])
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "carousel-item" }, [
+                      _c(
+                        "div",
+                        { staticClass: "card text-center w-50 mx-auto" },
+                        [
+                          _c("img", {
+                            staticClass: "card-img-top w-50 mx-auto",
+                            attrs: {
+                              src: "/img/default-product.jpg",
+                              alt: "..."
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-body" }, [
+                            _c(
+                              "div",
+                              { staticClass: "card-title font-biryani-bold" },
+                              [_vm._v("Business Plan")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "text-turqoise" }, [
+                              _vm._v("Rp250.000,-")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "card-text" }, [
+                              _vm._v(
+                                "Some quick example text to build on the card title and make\n                                        up the bulk of the card's content."
+                              )
+                            ])
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-prev",
+                      attrs: {
+                        href: "#products",
+                        role: "button",
+                        "data-bs-slide": "prev"
+                      }
+                    },
+                    [
+                      _c("span", {
+                        staticClass: "carousel-control-prev-icon",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "visually-hidden" }, [
+                        _vm._v("Previous")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-next",
+                      attrs: {
+                        href: "#products",
+                        role: "button",
+                        "data-bs-slide": "next"
+                      }
+                    },
+                    [
+                      _c("span", {
+                        staticClass: "carousel-control-next-icon",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "visually-hidden" }, [
+                        _vm._v("Next")
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ]
+        )
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -22442,7 +21932,7 @@ var staticRenderFns = [
                     staticClass: "text-decoration-none lh-lg",
                     attrs: { href: "#pricing" }
                   },
-                  [_vm._v("Pricing")]
+                  [_vm._v("Products")]
                 )
               ])
             ])
@@ -22696,7 +22186,7 @@ var staticRenderFns = [
                 staticClass: "nav-link font-biryani-bold",
                 attrs: { href: "#pricing" }
               },
-              [_vm._v("Pricing")]
+              [_vm._v("Products")]
             )
           ]),
           _vm._v(" "),
@@ -22902,87 +22392,93 @@ var render = function() {
       "nav",
       { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
       [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "navbar-toggler navbar-toggler-borderless border-0",
-              attrs: {
-                type: "button",
-                "data-bs-toggle": "collapse",
-                "data-bs-target": "#navbarNav"
-              }
-            },
-            [
-              _c(
-                "svg",
-                {
-                  attrs: {
-                    height: "30",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    stroke: "currentColor"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round",
-                      "stroke-width": "2",
-                      d: "M4 6h16M4 12h16M4 18h16"
-                    }
-                  })
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse justify-content-end",
-              attrs: { id: "navbarNav" }
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav" }, [
+        _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _c(
+              "router-link",
+              { staticClass: "navbar-brand", attrs: { to: "/", href: "#" } },
+              [
+                _c("img", {
+                  attrs: { src: "img/logo.png", height: "24", alt: "logo" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "navbar-toggler navbar-toggler-borderless border-0",
+                attrs: {
+                  type: "button",
+                  "data-bs-toggle": "collapse",
+                  "data-bs-target": "#navbarNav"
+                }
+              },
+              [
                 _c(
-                  "li",
-                  { staticClass: "nav-item px-2" },
+                  "svg",
+                  {
+                    attrs: {
+                      height: "30",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      fill: "none",
+                      viewBox: "0 0 24 24",
+                      stroke: "currentColor"
+                    }
+                  },
                   [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link font-biryani-bold",
-                        attrs: { to: "/team" }
-                      },
-                      [_vm._v("Team")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _vm._m(1)
-              ])
-            ]
-          )
-        ])
+                    _c("path", {
+                      attrs: {
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        d: "M4 6h16M4 12h16M4 18h16"
+                      }
+                    })
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse justify-content-end",
+                attrs: { id: "navbarNav" }
+              },
+              [
+                _c("ul", { staticClass: "navbar-nav" }, [
+                  _c(
+                    "li",
+                    { staticClass: "nav-item px-2" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link font-biryani-bold",
+                          attrs: { to: "/team" }
+                        },
+                        [_vm._v("Team")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ])
+              ]
+            )
+          ],
+          1
+        )
       ]
     )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-      _c("img", { attrs: { src: "img/logo.png", height: "24", alt: "logo" } })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
