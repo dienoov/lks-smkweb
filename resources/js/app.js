@@ -12,6 +12,7 @@ import Home from "./components/Home.vue";
 import Login from "./components/admin/Login";
 import Dashboard from "./components/admin/Dashboard";
 import Team from "./components/admin/Team";
+import Product from "./components/admin/Product";
 
 const routes = [
     {
@@ -33,6 +34,16 @@ const routes = [
     {
         path: "/team",
         component: Team,
+        meta: {
+            requiresAuth: true,
+        },
+    },
+    {
+        path: "/product",
+        component: Product,
+        meta: {
+            requiresAuth: true,
+        },
     },
 ];
 

@@ -239,28 +239,27 @@
                 <div class="row my-3">
                     <div id="products" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div :class="['carousel-item', {'active':index==0}]" v-for="(product, index) in products">
                                 <div class="card text-center w-50 mx-auto">
-                                    <img src="/img/default-product.jpg" class="card-img-top w-50 mx-auto" alt="...">
+                                    <img :src="'/img/' + product.image_path" class="card-img-top mx-auto mt-3" alt="..." style="height: 18rem; width: auto;">
                                     <div class="card-body">
-                                        <div class="card-title font-biryani-bold">Free Plan</div>
-                                        <p class="text-turqoise">Free</p>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
+                                        <div class="card-title font-biryani-bold">{{ product.name }}</div>
+                                        <p class="text-turqoise">{{ product.price }}</p>
+                                        <p class="card-text">{{ product.description }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="card text-center w-50 mx-auto">
-                                    <img src="/img/default-product.jpg" class="card-img-top w-50 mx-auto" alt="...">
-                                    <div class="card-body">
-                                        <div class="card-title font-biryani-bold">Business Plan</div>
-                                        <p class="text-turqoise">Rp250.000,-</p>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
+<!--                            <div class="carousel-item">-->
+<!--                                <div class="card text-center w-50 mx-auto">-->
+<!--                                    <img src="/img/default-product.jpg" class="card-img-top w-50 mx-auto" alt="...">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div class="card-title font-biryani-bold">Business Plan</div>-->
+<!--                                        <p class="text-turqoise">Rp250.000,-</p>-->
+<!--                                        <p class="card-text">Some quick example text to build on the card title and make-->
+<!--                                            up the bulk of the card's content.</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                         <a class="carousel-control-prev" href="#products" role="button"
                            data-bs-slide="prev">
@@ -456,6 +455,7 @@ export default {
     data() {
         return {
             teams: [],
+            products: [],
         };
     },
     name: "Home",
@@ -465,10 +465,15 @@ export default {
             this.$http.get("/api/team")
                 .then(({data}) => this.teams = data.teams)
                 .catch(({response: {data}}) => console.log(data));
-        }
+        },
+        loadProducts() {
+            this.$http.get("/api/product")
+                .then(({data}) => this.products = data.products);
+        },
     },
     mounted() {
         this.loadTeams();
+        this.loadProducts();
     },
 }
 </script>

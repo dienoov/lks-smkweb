@@ -20,7 +20,7 @@
                             <router-link class="nav-link font-biryani-bold" to="/team">Team</router-link>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link font-biryani-bold" href="#pricing">Pricing</a>
+                            <router-link class="nav-link font-biryani-bold" to="/product">Product</router-link>
                         </li>
                     </ul>
                 </div>
