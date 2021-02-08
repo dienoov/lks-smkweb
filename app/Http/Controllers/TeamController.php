@@ -13,9 +13,20 @@ class TeamController extends Controller
             'name' => 'required|string',
             'level' => 'required|string',
             'description' => 'required|string',
+            'image' => 'image:jpeg,png,jpg,svg|max:2048',
         ]);
 
-        $team = Team::create($request->all());
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('img'), $fileName);
+
+            unset($input['image']);
+            $input['image_path'] = $fileName;
+        }
+
+        $team = Team::create($input);
 
         return response()->json([
             'message' => "Team created successfully",
@@ -45,9 +56,20 @@ class TeamController extends Controller
             'name' => 'required|string',
             'level' => 'required|string',
             'description' => 'required|string',
+            'image' => 'image:jpeg,png,jpg,svg|max:2048',
         ]);
 
-        $team = Team::where('id', $id)->update($request->all());
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('img'), $fileName);
+
+            unset($input['image']);
+            $input['image_path'] = $fileName;
+        }
+
+        $team = Team::where('id', $id)->update($input);
 
         return response()->json([
             'message' => "Team updated successfully",

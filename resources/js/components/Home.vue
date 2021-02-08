@@ -198,70 +198,18 @@
                     </div>
                 </div>
                 <div class="row my-3">
-                    <div class="col-lg-6 py-3">
+                    <div class="col-lg-6 py-3" v-for="team in teams">
                         <div class="card border-0 shadow-sm h-100">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="img/Artboards_Diversity_Avatars_by_Netguru-55.svg" alt="...">
+                                    <img :src="'img/' + team.image_path" alt="avatar">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title font-biryani-bold">Walter White</h5>
-                                        <p class="card-text"><small class="text-muted">Chief Executive Officer</small>
+                                        <h5 class="card-title font-biryani-bold">{{ team.name }}</h5>
+                                        <p class="card-text"><small class="text-muted">{{ team.level }}</small>
                                         </p>
-                                        <p class="card-text">Explicabo voluptatem mollitia et repellat qui dolorum
-                                            quasi</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 py-3">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="img/Artboards_Diversity_Avatars_by_Netguru-13.svg" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-biryani-bold">Sarah Jhonson</h5>
-                                        <p class="card-text"><small class="text-muted">Product Manager</small></p>
-                                        <p class="card-text">Aut maiores voluptates amet et quis praesentium qui senda
-                                            para</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 py-3">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="img/Artboards_Diversity_Avatars_by_Netguru-16.svg" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-biryani-bold">William Anderson</h5>
-                                        <p class="card-text"><small class="text-muted">CTO</small></p>
-                                        <p class="card-text">Quisquam facilis cum velit laborum corrupti fuga rerum
-                                            quia</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 py-3">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="img/Artboards_Diversity_Avatars_by_Netguru-06.svg" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-biryani-bold">Amanda Jepson</h5>
-                                        <p class="card-text"><small class="text-muted">Accountant</small></p>
-                                        <p class="card-text">Dolorum tempora officiis odit laborum officiis et et
-                                            accusamus</p>
+                                        <p class="card-text">{{ team.description }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -623,9 +571,25 @@
 
 <script>
 import Navbar from "./Navbar";
+
 export default {
+    data() {
+        return {
+            teams: [],
+        };
+    },
     name: "Home",
-    components: {Navbar}
+    components: {Navbar},
+    methods: {
+        loadTeams() {
+            this.$http.get("/api/team")
+                .then(({data}) => this.teams = data.teams)
+                .catch(({response: {data}}) => console.log(data));
+        }
+    },
+    mounted() {
+        this.loadTeams();
+    },
 }
 </script>
 

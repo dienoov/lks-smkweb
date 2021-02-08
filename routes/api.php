@@ -22,11 +22,13 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::group(['prefix' => 'team', 'middleware' => 'auth:api'], function () {
-    Route::post('', [TeamController::class, 'create']);
     Route::get('', [TeamController::class, 'all']);
-    Route::get('{id}', [TeamController::class, 'find']);
-    Route::put('{id}', [TeamController::class, 'update']);
-    Route::delete('{id}', [TeamController::class, 'delete']);
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::post('', [TeamController::class, 'create']);
+        Route::get('{id}', [TeamController::class, 'find']);
+        Route::put('{id}', [TeamController::class, 'update']);
+        Route::delete('{id}', [TeamController::class, 'delete']);
+    });
 });
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {

@@ -2431,63 +2431,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      teams: []
+    };
+  },
   name: "Home",
   components: {
     Navbar: _Navbar__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  methods: {
+    loadTeams: function loadTeams() {
+      var _this = this;
+
+      this.$http.get("/api/team").then(function (_ref) {
+        var data = _ref.data;
+        return _this.teams = data.teams;
+      })["catch"](function (_ref2) {
+        var data = _ref2.response.data;
+        return console.log(data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loadTeams();
   }
 });
 
@@ -2783,6 +2752,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2791,7 +2761,8 @@ __webpack_require__.r(__webpack_exports__);
       id: 0,
       name: "",
       level: "",
-      description: ""
+      description: "",
+      file: ""
     };
   },
   name: "Team",
@@ -2812,6 +2783,7 @@ __webpack_require__.r(__webpack_exports__);
       this.name = "";
       this.level = "";
       this.description = "";
+      this.$refs.image.value = null;
     },
     editTeam: function editTeam(id) {
       var team = this.teams.find(function (team) {
@@ -2821,19 +2793,25 @@ __webpack_require__.r(__webpack_exports__);
       this.name = team.name;
       this.level = team.level;
       this.description = team.description;
+      this.$refs.image.value = null;
     },
     saveTeam: function saveTeam() {
       var _this2 = this;
 
       var save;
-      if (this.id == 0) save = this.$http.post("/api/team", {
-        name: this.name,
-        level: this.level,
-        description: this.description
-      });else save = this.$http.put("/api/team/".concat(this.id), {
-        name: this.name,
-        level: this.level,
-        description: this.description
+      var form = new FormData();
+      form.append('image', this.file);
+      form.append('name', this.name);
+      form.append('level', this.level);
+      form.append('description', this.description);
+      if (this.id == 0) save = this.$http.post("/api/team", form, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });else save = this.$http.put("/api/team/".concat(this.id), form, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
       save.then(function () {
         _this2.loadTeams();
@@ -2855,6 +2833,9 @@ __webpack_require__.r(__webpack_exports__);
         var data = _ref3.response.data;
         console.log(data);
       });
+    },
+    handleFile: function handleFile() {
+      this.file = this.$refs.image.files[0];
     }
   },
   mounted: function mounted() {
@@ -21125,7 +21106,67 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _vm._m(5),
+      _c(
+        "section",
+        { staticClass: "d-flex align-items-center", attrs: { id: "team" } },
+        [
+          _c(
+            "div",
+            { staticClass: "container py-5", attrs: { "data-aos": "fade-up" } },
+            [
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row my-3" },
+                _vm._l(_vm.teams, function(team) {
+                  return _c("div", { staticClass: "col-lg-6 py-3" }, [
+                    _c(
+                      "div",
+                      { staticClass: "card border-0 shadow-sm h-100" },
+                      [
+                        _c("div", { staticClass: "row g-0" }, [
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("img", {
+                              attrs: {
+                                src: "img/" + team.image_path,
+                                alt: "avatar"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-8" }, [
+                            _c("div", { staticClass: "card-body" }, [
+                              _c(
+                                "h5",
+                                { staticClass: "card-title font-biryani-bold" },
+                                [_vm._v(_vm._s(team.name))]
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "card-text" }, [
+                                _c("small", { staticClass: "text-muted" }, [
+                                  _vm._v(_vm._s(team.level))
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "card-text" }, [
+                                _vm._v(_vm._s(team.description))
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                }),
+                0
+              )
+            ]
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "section",
@@ -21135,9 +21176,9 @@ var render = function() {
             "div",
             { staticClass: "container py-5", attrs: { "data-aos": "fade-up" } },
             [
-              _vm._m(6),
-              _vm._v(" "),
               _vm._m(7),
+              _vm._v(" "),
+              _vm._m(8),
               _vm._v(" "),
               _c("div", { staticClass: "row my-3" }, [
                 _c("div", { staticClass: "col-lg-4 py-3" }, [
@@ -21662,9 +21703,9 @@ var render = function() {
         },
         [
           _c("div", { staticClass: "container" }, [
-            _vm._m(8),
-            _vm._v(" "),
             _vm._m(9),
+            _vm._v(" "),
+            _vm._m(10),
             _vm._v(" "),
             _c("div", { staticClass: "row mb-5" }, [
               _c("div", { staticClass: "col-lg-5 py-3" }, [
@@ -21708,7 +21749,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(10)
+                      _vm._m(11)
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "row my-3" }, [
@@ -21740,7 +21781,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(11)
+                      _vm._m(12)
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "row my-3" }, [
@@ -21772,25 +21813,25 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(12)
+                      _vm._m(13)
                     ]),
                     _vm._v(" "),
-                    _vm._m(13)
+                    _vm._m(14)
                   ])
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(14)
+              _vm._m(15)
             ])
           ])
         ]
       ),
       _vm._v(" "),
-      _vm._m(15),
-      _vm._v(" "),
       _vm._m(16),
       _vm._v(" "),
-      _vm._m(17)
+      _vm._m(17),
+      _vm._v(" "),
+      _vm._m(18)
     ],
     1
   )
@@ -22068,198 +22109,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "d-flex align-items-center", attrs: { id: "team" } },
-      [
-        _c(
-          "div",
-          { staticClass: "container py-5", attrs: { "data-aos": "fade-up" } },
-          [
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center"
-                },
-                [
-                  _c(
-                    "h2",
-                    { staticClass: "font-biryani-black text-uppercase" },
-                    [_vm._v("Team")]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-12 text-center" }, [
-                _c("p", [
-                  _vm._v(
-                    "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.\n                        Sit sint\n                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.\n                        Quia\n                        fugiat sit in iste officiis commodi quidem hic quas."
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row my-3" }, [
-              _c("div", { staticClass: "col-lg-6 py-3" }, [
-                _c("div", { staticClass: "card border-0 shadow-sm h-100" }, [
-                  _c("div", { staticClass: "row g-0" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "img/Artboards_Diversity_Avatars_by_Netguru-55.svg",
-                          alt: "..."
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-8" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c(
-                          "h5",
-                          { staticClass: "card-title font-biryani-bold" },
-                          [_vm._v("Walter White")]
-                        ),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _c("small", { staticClass: "text-muted" }, [
-                            _vm._v("Chief Executive Officer")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Explicabo voluptatem mollitia et repellat qui dolorum\n                                        quasi"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 py-3" }, [
-                _c("div", { staticClass: "card border-0 shadow-sm h-100" }, [
-                  _c("div", { staticClass: "row g-0" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "img/Artboards_Diversity_Avatars_by_Netguru-13.svg",
-                          alt: "..."
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-8" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c(
-                          "h5",
-                          { staticClass: "card-title font-biryani-bold" },
-                          [_vm._v("Sarah Jhonson")]
-                        ),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _c("small", { staticClass: "text-muted" }, [
-                            _vm._v("Product Manager")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Aut maiores voluptates amet et quis praesentium qui senda\n                                        para"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 py-3" }, [
-                _c("div", { staticClass: "card border-0 shadow-sm h-100" }, [
-                  _c("div", { staticClass: "row g-0" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "img/Artboards_Diversity_Avatars_by_Netguru-16.svg",
-                          alt: "..."
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-8" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c(
-                          "h5",
-                          { staticClass: "card-title font-biryani-bold" },
-                          [_vm._v("William Anderson")]
-                        ),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _c("small", { staticClass: "text-muted" }, [
-                            _vm._v("CTO")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Quisquam facilis cum velit laborum corrupti fuga rerum\n                                        quia"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 py-3" }, [
-                _c("div", { staticClass: "card border-0 shadow-sm h-100" }, [
-                  _c("div", { staticClass: "row g-0" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "img/Artboards_Diversity_Avatars_by_Netguru-06.svg",
-                          alt: "..."
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-8" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c(
-                          "h5",
-                          { staticClass: "card-title font-biryani-bold" },
-                          [_vm._v("Amanda Jepson")]
-                        ),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _c("small", { staticClass: "text-muted" }, [
-                            _vm._v("Accountant")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Dolorum tempora officiis odit laborum officiis et et\n                                        accusamus"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "col-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center"
+        },
+        [
+          _c("h2", { staticClass: "font-biryani-black text-uppercase" }, [
+            _vm._v("Team")
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-12 text-center" }, [
+        _c("p", [
+          _vm._v(
+            "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.\n                        Sit sint\n                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.\n                        Quia\n                        fugiat sit in iste officiis commodi quidem hic quas."
+          )
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -23332,8 +23209,10 @@ var render = function() {
                 _c("div", { staticClass: "mb-3" }),
                 _vm._v(" "),
                 _c("input", {
+                  ref: "image",
                   staticClass: "form-control",
-                  attrs: { type: "file", name: "image", id: "image" }
+                  attrs: { type: "file", name: "image", id: "image" },
+                  on: { change: _vm.handleFile }
                 })
               ]),
               _vm._v(" "),

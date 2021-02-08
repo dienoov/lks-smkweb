@@ -48,7 +48,8 @@
                         <input type="text" name="description" id="description" class="form-control"
                                v-model="description" required>
                         <div class="mb-3"></div>
-                        <input type="file" name="image" id="image" class="form-control">
+                        <input type="file" name="image" id="image" ref="image" class="form-control"
+                               v-on:change="handleFile">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -74,6 +75,7 @@ export default {
             name: "",
             level: "",
             description: "",
+            file: "",
         };
     },
     name: "Team",
@@ -88,6 +90,7 @@ export default {
             this.name = "";
             this.level = "";
             this.description = "";
+            this.$refs.image.value = null;
         },
         editTeam(id) {
             const team = this.teams.find(team => team.id == id);
@@ -95,21 +98,21 @@ export default {
             this.name = team.name;
             this.level = team.level;
             this.description = team.description;
+            this.$refs.image.value = null;
         },
         saveTeam() {
             let save;
+
+            let form = new FormData();
+            form.append('image', this.file);
+            form.append('name', this.name);
+            form.append('level', this.level);
+            form.append('description', this.description);
+
             if (this.id == 0)
-                save = this.$http.post("/api/team", {
-                    name: this.name,
-                    level: this.level,
-                    description: this.description,
-                })
+                save = this.$http.post("/api/team", form, {headers: {'Content-Type': 'multipart/form-data'}});
             else
-                save = this.$http.put(`/api/team/${this.id}`, {
-                    name: this.name,
-                    level: this.level,
-                    description: this.description,
-                });
+                save = this.$http.put(`/api/team/${this.id}`, form, {headers: {'Content-Type': 'multipart/form-data'}});
 
             save.then(() => {
                 this.loadTeams();
@@ -127,7 +130,10 @@ export default {
                 .catch(({response: {data}}) => {
                     console.log(data);
                 })
-        }
+        },
+        handleFile() {
+            this.file = this.$refs.image.files[0];
+        },
     },
     mounted() {
         this.loadTeams();
