@@ -11,6 +11,7 @@ import App from "./components/App.vue";
 import Home from "./components/Home.vue";
 import Login from "./components/admin/Login";
 import Dashboard from "./components/admin/Dashboard";
+import Team from "./components/admin/Team";
 
 const routes = [
     {
@@ -28,6 +29,10 @@ const routes = [
     {
         path: "/login",
         component: Login,
+    },
+    {
+        path: "/team",
+        component: Team,
     },
 ];
 

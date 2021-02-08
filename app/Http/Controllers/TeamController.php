@@ -55,5 +55,13 @@ class TeamController extends Controller
         ]);
     }
 
+    public function delete(int $id, Request $request)
+    {
+        Team::destroy($id);
+
+        return response()->json([
+            'message' => "Team deleted successfully",
+        ]);
+    }
 
 }

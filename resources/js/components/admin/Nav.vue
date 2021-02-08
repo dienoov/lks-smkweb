@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.png" height="24" alt="logo">
@@ -17,7 +17,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item px-2">
-                            <a class="nav-link font-biryani-bold" href="#team">Team</a>
+                            <router-link class="nav-link font-biryani-bold" to="/team">Team</router-link>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link font-biryani-bold" href="#pricing">Pricing</a>

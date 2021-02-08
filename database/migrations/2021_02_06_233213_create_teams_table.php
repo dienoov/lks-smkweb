@@ -18,7 +18,7 @@ class CreateTeamsTable extends Migration
             $table->string('name');
             $table->string('level');
             $table->text('description');
-            $table->text('image_path');
+            $table->text('image_path')->default('/');
             $table->timestamps();
         });
     }

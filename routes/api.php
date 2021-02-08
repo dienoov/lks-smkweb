@@ -26,7 +26,7 @@ Route::group(['prefix' => 'team', 'middleware' => 'auth:api'], function () {
     Route::get('', [TeamController::class, 'all']);
     Route::get('{id}', [TeamController::class, 'find']);
     Route::put('{id}', [TeamController::class, 'update']);
-//    Route::delete()
+    Route::delete('{id}', [TeamController::class, 'delete']);
 });
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
