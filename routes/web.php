@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
+
+//Route::get('login', function () {
+//    return view('login');
+//})->name('login');
+//
+//Route::middleware('auth:api')->get('/team', function () {
+//    return view('team');
+//});

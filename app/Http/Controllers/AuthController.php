@@ -21,11 +21,11 @@ class AuthController extends Controller
             ], 401);
 
         $user = Auth::user();
-        $success['token'] = $user->createToken('appToken')->accessToken;
+        $token = $user->createToken('appToken')->accessToken;
 
         return response()->json([
             'message' => "Successfully logged in",
-            'token' => $success,
+            'token' => $token,
             'user' => $user,
         ]);
     }
@@ -41,11 +41,11 @@ class AuthController extends Controller
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
-        $success['token'] = $user->createToken('appToken')->accessToken;
+        $token = $user->createToken('appToken')->accessToken;
 
         return response()->json([
             'message' => "Successfully created user",
-            'token' => $success,
+            'token' => $token,
             'user' => $user,
         ]);
     }
